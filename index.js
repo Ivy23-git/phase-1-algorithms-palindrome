@@ -1,6 +1,22 @@
-function isPalindrome(word) {
+
+  function isPalindrome(str) {
+    // Convert the string to lowercase
+    str = str.toLowerCase();
+  
+    // Use two pointers to check the characters from the beginning and the end
+    let start = 0;
+    let end = str.length - 1;
+    while (start < end) {
+      if (str[start] !== str[end]) {
+        return false;
+      }
+      start++;
+      end--;
+    }
+    return true;
+  }
   // Write your algorithm here
-}
+
 
 /* 
   Add your pseudocode here
